@@ -1,0 +1,21 @@
+package:
+  id: io.github.quickbox
+  name: quickbox
+  version: 2.6.20
+  kind: app
+  description: |
+    Quick Event - Orienteering Software.
+
+runtime:
+  id: org.deepin.Runtime
+  version: 23.0.0
+
+source:
+  kind: git
+  url: https://github.com/Quick-Event/quickbox.git
+  commit: 339da608423868c61ee2914385f67627e0df0c06
+  patch:
+    - patches/fix_install.patch
+
+build:
+  kind: cmake

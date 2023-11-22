@@ -1,0 +1,26 @@
+diff --git a/quickshow/CMakeLists.txt b/quickshow/CMakeLists.txt
+index b38c8c94..9e2c8a67 100644
+--- a/quickshow/CMakeLists.txt
++++ b/quickshow/CMakeLists.txt
+@@ -32,6 +32,9 @@ else()
+     target_sources(quickshow PRIVATE ${QM_FILES})
+ endif()
+ 
++install(FILES quickshow.desktop DESTINATION share/applications/)
++install(FILES images/quickshow.ico DESTINATION share/icons/)
++
+ target_link_libraries(quickshow PRIVATE Qt::Widgets Qt::Sql libqfcore)
+ target_include_directories(quickshow PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+diff --git a/quickshow/quickshow.desktop b/quickshow/quickshow.desktop
+new file mode 100644
+index 00000000..c194c885
+--- /dev/null
++++ b/quickshow/quickshow.desktop
+@@ -0,0 +1,6 @@
++[Desktop Entry]
++Name=quickshow
++Comment=Quick Event - Orienteering Software.
++Exec=quickshow %F
++Icon=quickshow
++Type=Application
