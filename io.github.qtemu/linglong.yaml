@@ -1,0 +1,21 @@
+package:
+  id: io.github.qtemu
+  name: qtemu
+  version: 2.1.0
+  kind: app
+  description: |
+    QtEmu is a graphical user interface for QEMU written in Qt.
+
+runtime:
+  id: org.deepin.Runtime
+  version: 23.0.0
+
+source:
+  kind: git
+  url: https://github.com/oddguid/qtemu.git
+  commit: 5147fa7ae63c4cc0d3e5d63c64a02d73c9888eb2
+  patch:
+    - patches/fix_install.patch
+
+build:
+  kind: qmake
