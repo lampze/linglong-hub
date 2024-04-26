@@ -1,0 +1,23 @@
+package:
+  id: io.github.multiplatform-sonivoxeas
+  name: multiplatform-sonivoxeas
+  version: 2.1.0
+  kind: app
+  description: |
+    Multiplatform Sonivox EAS for Qt.
+
+runtime:
+  id: org.deepin.Runtime
+  version: 23.0.0
+
+depends:
+  - id: drumstick/2.9.0
+    type: runtime
+
+source:
+  kind: git
+  url: https://github.com/pedrolcl/multiplatform-sonivoxeas.git
+  commit: ec1b3984a493f44c1b38d84bc42b928e8b227e5f
+
+build:
+  kind: cmake
