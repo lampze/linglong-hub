@@ -1,0 +1,13 @@
+diff --git a/i2pd_qt.pro b/i2pd_qt.pro
+index a26fb59..41b32b5 100644
+--- a/i2pd_qt.pro
++++ b/i2pd_qt.pro
+@@ -158,6 +158,7 @@ macx {
+ 
+ linux:!android {
+         message("Using Linux settings")
++       INCLUDEPATH+=/runtime/include
+         LIBS += -lcrypto -lssl -lboost_system -lboost_date_time -lboost_filesystem -lboost_program_options -lpthread -lminiupnpc
+ 
+         INSTALLS += TARGET
+

@@ -1,0 +1,28 @@
+package:
+  id: io.github.i2pd-qt
+  name: i2pd-qt
+  version: 2.52.0
+  kind: app
+  description: |
+    i2pd with Qt based GUI.
+
+runtime:
+  id: org.deepin.Runtime
+  version: 23.0.0
+
+depends:
+  - id: miniupnpc/2.2.3
+    type: runtime
+  - id: boost-defaults/1.74.0.3
+    type: runtime
+
+source:
+  kind: git
+  url: https://github.com/PurpleI2P/i2pd-qt.git
+  commit: d7ff318d6e3545df98f8532cde93871c2b801404
+  patch:
+    - patches/fix_build.patch
+    - patches/fix_install.patch
+
+build:
+  kind: qmake

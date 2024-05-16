@@ -1,0 +1,22 @@
+diff --git a/i2pd_qt.pro b/i2pd_qt.pro
+index a26fb59..7abbbaa 100644
+--- a/i2pd_qt.pro
++++ b/i2pd_qt.pro
+@@ -4,13 +4,13 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+ 
+ TARGET = i2pd_qt
+ TARGET.files = i2pd_qt
+-linux:TARGET.path = /usr/bin/
++linux:TARGET.path = $${PREFIX}/bin/
+ 
+ desktop.files = contrib/website.i2pd.i2pd.desktop
+-linux:desktop.path = /usr/share/applications/
++linux:desktop.path = $${PREFIX}/share/applications/
+ 
+ icons.files = contrib/icons/*
+-linux:icons.path = /usr/share/icons/hicolor/
++linux:icons.path = $${PREFIX}/share/icons/hicolor/
+ 
+ TEMPLATE = app
+ QMAKE_CXXFLAGS *= -Wno-unused-parameter -Wno-maybe-uninitialized -Wno-deprecated-copy
+
